@@ -1,4 +1,6 @@
 import 'package:coffeeshop/Widgets/common_button.dart';
+import 'package:coffeeshop/screens/app_main_screen.dart';
+import 'package:coffeeshop/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -54,7 +56,17 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20),
-                    CommonButton(title: "Get Started", onTab: () {}),
+                    CommonButton(
+                      title: "Get Started",
+                      onTab: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const AppMainScreen(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
